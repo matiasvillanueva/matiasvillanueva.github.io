@@ -12,10 +12,9 @@ function App() {
   const { data : contractMetadata } = useContractMetadata(contractAddress);
   const { data: mintSupply } = useClaimedNFTSupply(contract);
   const { data: unMintSupply } = useUnclaimedNFTSupply(contract);
-  const { data: claimConditions } = useClaimConditions(contract);
-  const { data: claimIneligibilityReasons } = useClaimIneligibilityReasons(contract, {quantity: 1});
-
-  console.log(claimIneligibilityReasons);
+  // Not implemented. But this is how you can get the claim conditions.
+  //const { data: claimConditions } = useClaimConditions(contract);
+  //const { data: claimIneligibilityReasons } = useClaimIneligibilityReasons(contract, {quantity: 1, walletAddress: address});
 
   const mint =async () => {
     try {
